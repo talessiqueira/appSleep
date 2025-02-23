@@ -64,9 +64,14 @@ struct Welcome: View {
             
             .padding(.bottom, 10)
             
-            Text("Images from flaticon")
-                .font(.system(size: 10))
-                .foregroundColor(.gray)
+            VStack{
+                Text("Images from Flaticon.")
+                    .font(.system(size: 10))
+                    .foregroundColor(.gray)
+                Text("Github: talessiqueira")
+                    .font(.system(size: 10))
+                    .foregroundColor(.gray)
+            }
             
                 .navigationDestination(isPresented: $navigateToNextPage) {
                     mainScreen()

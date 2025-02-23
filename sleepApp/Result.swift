@@ -38,14 +38,22 @@ struct Result: View {
                     .scaledToFit()
                     .frame(width: 200, height: 200)
                     .padding(.bottom,5)
+                
                 Text("This is your sleep cycle")
                     .font(.system(size: 25, weight: .bold))
                     .padding(.bottom, 1)
-                Text("The time to sleep is available at the # 6 cycle.")
-                    .font(.system(size: 18))
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(.horizontal)
-                    .padding(.bottom)
+                
+                VStack{
+                    Text("To sleep well, go to bed until")
+                        .font(.system(size: 18))
+                    if let lastCycle = sleepCycles.last {
+                        Text("\(lastCycle.1).")
+                            .bold().foregroundColor(.blue)
+                            .font(.system(size: 18))
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                }
+                
                 
                 // Cabeçalho com as colunas
                 
@@ -59,20 +67,26 @@ struct Result: View {
                     Text("Sleep Duration (min)")
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity)
+                        .multilineTextAlignment(.center)
                 }
                 .padding(.horizontal)
                 
-                List(sleepCycles, id: \.0) { cycle in
-                    
-                    
-                    HStack {
-                        Text("\(cycle.0)")
-                            .fontWeight(.bold)
-                        Spacer()
-                        Text("\(cycle.1)")
-                        Spacer()
-                        Text("\(cycle.2)")
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        ForEach(sleepCycles, id: \.0) { cycle in
+                            HStack {
+                                Text("\(cycle.0)")
+                                    .fontWeight(.bold)
+                                Spacer()
+                                Text("\(cycle.1)")
+                                Spacer()
+                                Text("\(cycle.2)")
+                            }
+                            .padding(.horizontal, 60)
+                            .padding(.vertical, 10)
+                        }
                     }
+                    .background(Color.gray.opacity(0.2))
                 }
                 
                 Button(action: { withAnimation(.easeInOut) {  // Adicionando animação
@@ -89,6 +103,19 @@ struct Result: View {
                 }
                 
             }
+            
+            .padding(.bottom)
+            
+            
+            VStack{
+                Text("Images from Flaticon.")
+                    .font(.system(size: 10))
+                    .foregroundColor(.gray)
+                Text("Github: talessiqueira")
+                    .font(.system(size: 10))
+                    .foregroundColor(.gray)
+            }
+            
             
             .navigationDestination(isPresented: $navigateToNextPage) {
                 mainScreen()

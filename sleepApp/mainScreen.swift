@@ -14,15 +14,18 @@ struct mainScreen: View {
     var body: some View {
         NavigationStack{
             VStack {
-                
+    
                 Image("night")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
                     .padding(.bottom, 20)
                     .padding(.top, 15)
+                
                 Text("Choose the time to wake up:")
                     .font(.system(size: 40, weight: .bold))
+                    .padding(.horizontal, 50)
+                    .multilineTextAlignment(.center)
                 
                 DatePicker("", selection: $selectedTime, displayedComponents: .hourAndMinute)
                     .datePickerStyle(WheelDatePickerStyle())
@@ -44,9 +47,14 @@ struct mainScreen: View {
             
             .padding(.bottom, 10)
             
-            Text("Images from flaticon")
-                .font(.system(size: 10))
-                .foregroundColor(.gray)
+            VStack{
+                Text("Images from Flaticon.")
+                    .font(.system(size: 10))
+                    .foregroundColor(.gray)
+                Text("Github: talessiqueira")
+                    .font(.system(size: 10))
+                    .foregroundColor(.gray)
+            }
             
             .navigationDestination(isPresented: $navigateToNextPage) {
                 Result(wakeUpTime: selectedTime)
