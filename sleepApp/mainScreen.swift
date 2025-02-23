@@ -9,8 +9,10 @@ import SwiftUI
 
 struct mainScreen: View {
     @State private var selectedTime = Calendar.current.date(from: DateComponents(hour: 8, minute: 30)) ?? Date()
+    @State private var navigateToNextPage = false
         
-        var body: some View {
+    var body: some View {
+        NavigationStack{
             VStack {
                 
                 Image("night")
@@ -26,10 +28,9 @@ struct mainScreen: View {
                     .datePickerStyle(WheelDatePickerStyle())
                     .labelsHidden()
                 
-                Button(action: {
-                    print("Horário selecionado: \(selectedTime)")
-                    // Aqui você pode navegar para outra tela
-                }) {
+                Button(action: {withAnimation(.easeInOut) {  // Adicionando animação
+                    navigateToNextPage = true
+                }}) {
                     Text("Done")
                         .font(.system(size: 20, weight: .bold))
                         .padding()
@@ -40,13 +41,20 @@ struct mainScreen: View {
                         .padding(.horizontal, 40)
                 }
             }
-
+            
             .padding(.bottom, 10)
             
             Text("Images from flaticon")
                 .font(.system(size: 10))
                 .foregroundColor(.gray)
+            
+            .navigationDestination(isPresented: $navigateToNextPage) {
+                Result(wakeUpTime: selectedTime)
+                        .transition(.move(edge: .trailing))
+                        .navigationBarBackButtonHidden(true)
+                }
         }
+    }
 }
 
 #Preview {

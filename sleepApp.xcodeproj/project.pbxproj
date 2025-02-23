@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C16A31D2D6B8D340075640E /* mainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C16A31C2D6B8D340075640E /* mainScreen.swift */; };
+		1C16A31F2D6B98580075640E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C16A31E2D6B98580075640E /* Result.swift */; };
 		1C8EB6662D68EEB70068DDCB /* sleepAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EB6652D68EEB70068DDCB /* sleepAppApp.swift */; };
 		1C8EB6682D68EEB70068DDCB /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EB6672D68EEB70068DDCB /* Welcome.swift */; };
 		1C8EB66A2D68EEB90068DDCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8EB6692D68EEB90068DDCB /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		1C16A31C2D6B8D340075640E /* mainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainScreen.swift; sourceTree = "<group>"; };
+		1C16A31E2D6B98580075640E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		1C8EB6622D68EEB70068DDCB /* sleepApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sleepApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8EB6652D68EEB70068DDCB /* sleepAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleepAppApp.swift; sourceTree = "<group>"; };
 		1C8EB6672D68EEB70068DDCB /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				1C8EB6652D68EEB70068DDCB /* sleepAppApp.swift */,
 				1C8EB6672D68EEB70068DDCB /* Welcome.swift */,
 				1C16A31C2D6B8D340075640E /* mainScreen.swift */,
+				1C16A31E2D6B98580075640E /* Result.swift */,
 				1C8EB6692D68EEB90068DDCB /* Assets.xcassets */,
 			);
 			path = sleepApp;
@@ -250,6 +253,7 @@
 			files = (
 				1C8EB6682D68EEB70068DDCB /* Welcome.swift in Sources */,
 				1C16A31D2D6B8D340075640E /* mainScreen.swift in Sources */,
+				1C16A31F2D6B98580075640E /* Result.swift in Sources */,
 				1C8EB6662D68EEB70068DDCB /* sleepAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
