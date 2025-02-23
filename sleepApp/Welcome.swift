@@ -40,8 +40,7 @@ struct Welcome: View {
                 
                 // 🔥 Criamos um espaço fixo para o botão, mas só mostramos na última tela
                 if currentPage == 2 {
-                    navigationDestination(isPresented: $navigateToNextPage) {
-                        mainScreen()
+
                     Button(action: {
                         navigateToNextPage = true
                     }) {
@@ -55,7 +54,7 @@ struct Welcome: View {
                             .padding(.horizontal, 50)
                     }
                     .transition(.opacity) // Adiciona um efeito suave de aparecimento
-                    }
+                    
                 } else {
                     // 🔹 Espaço reservado para evitar que o indicador mude de posição
                     Color.clear
@@ -68,6 +67,11 @@ struct Welcome: View {
             Text("Images from flaticon")
                 .font(.system(size: 10))
                 .foregroundColor(.gray)
+            
+                .navigationDestination(isPresented: $navigateToNextPage) {
+                    mainScreen()
+                        .navigationBarBackButtonHidden(true)
+                }
             
         }
     }

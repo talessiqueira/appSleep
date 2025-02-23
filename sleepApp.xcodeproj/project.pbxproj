@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C16A31D2D6B8D340075640E /* mainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C16A31C2D6B8D340075640E /* mainScreen.swift */; };
 		1C8EB6662D68EEB70068DDCB /* sleepAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EB6652D68EEB70068DDCB /* sleepAppApp.swift */; };
 		1C8EB6682D68EEB70068DDCB /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EB6672D68EEB70068DDCB /* Welcome.swift */; };
 		1C8EB66A2D68EEB90068DDCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8EB6692D68EEB90068DDCB /* Assets.xcassets */; };
-		1C8EB66D2D68EEB90068DDCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8EB66C2D68EEB90068DDCB /* Preview Assets.xcassets */; };
 		1C8EB6772D68EEB90068DDCB /* sleepAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EB6762D68EEB90068DDCB /* sleepAppTests.swift */; };
 		1C8EB6812D68EEB90068DDCB /* sleepAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EB6802D68EEB90068DDCB /* sleepAppUITests.swift */; };
 		1C8EB6832D68EEB90068DDCB /* sleepAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EB6822D68EEB90068DDCB /* sleepAppUITestsLaunchTests.swift */; };
@@ -34,11 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C16A31C2D6B8D340075640E /* mainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainScreen.swift; sourceTree = "<group>"; };
 		1C8EB6622D68EEB70068DDCB /* sleepApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sleepApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8EB6652D68EEB70068DDCB /* sleepAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleepAppApp.swift; sourceTree = "<group>"; };
 		1C8EB6672D68EEB70068DDCB /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		1C8EB6692D68EEB90068DDCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1C8EB66C2D68EEB90068DDCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1C8EB6722D68EEB90068DDCB /* sleepAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sleepAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8EB6762D68EEB90068DDCB /* sleepAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleepAppTests.swift; sourceTree = "<group>"; };
 		1C8EB67C2D68EEB90068DDCB /* sleepAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sleepAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,18 +96,10 @@
 			children = (
 				1C8EB6652D68EEB70068DDCB /* sleepAppApp.swift */,
 				1C8EB6672D68EEB70068DDCB /* Welcome.swift */,
+				1C16A31C2D6B8D340075640E /* mainScreen.swift */,
 				1C8EB6692D68EEB90068DDCB /* Assets.xcassets */,
-				1C8EB66B2D68EEB90068DDCB /* Preview Content */,
 			);
 			path = sleepApp;
-			sourceTree = "<group>";
-		};
-		1C8EB66B2D68EEB90068DDCB /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				1C8EB66C2D68EEB90068DDCB /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		1C8EB6752D68EEB90068DDCB /* sleepAppTests */ = {
@@ -191,7 +183,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					1C8EB6612D68EEB70068DDCB = {
 						CreatedOnToolsVersion = 15.4;
@@ -231,7 +223,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C8EB66D2D68EEB90068DDCB /* Preview Assets.xcassets in Resources */,
 				1C8EB66A2D68EEB90068DDCB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C8EB6682D68EEB70068DDCB /* Welcome.swift in Sources */,
+				1C16A31D2D6B8D340075640E /* mainScreen.swift in Sources */,
 				1C8EB6662D68EEB70068DDCB /* sleepAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"sleepApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"sleepApp\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -449,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"sleepApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"sleepApp\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -473,7 +465,6 @@
 		1C8EB68A2D68EEB90068DDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -492,7 +483,6 @@
 		1C8EB68B2D68EEB90068DDCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -511,7 +501,6 @@
 		1C8EB68D2D68EEB90068DDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -528,7 +517,6 @@
 		1C8EB68E2D68EEB90068DDCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

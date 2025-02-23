@@ -8,25 +8,30 @@
 import SwiftUI
 
 struct mainScreen: View {
-    @State private var selectedTime = Date()
+    @State private var selectedTime = Calendar.current.date(from: DateComponents(hour: 8, minute: 30)) ?? Date()
         
         var body: some View {
             VStack {
+                
+                Image("night")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                    .padding(.bottom, 20)
+                    .padding(.top, 15)
                 Text("Choose the time to wake up:")
-                    .font(.system(size: 20, weight: .bold))
-                    .padding()
+                    .font(.system(size: 40, weight: .bold))
                 
                 DatePicker("", selection: $selectedTime, displayedComponents: .hourAndMinute)
                     .datePickerStyle(WheelDatePickerStyle())
                     .labelsHidden()
-                    .padding()
                 
                 Button(action: {
                     print("Horário selecionado: \(selectedTime)")
                     // Aqui você pode navegar para outra tela
                 }) {
-                    Text("Avançar")
-                        .font(.headline)
+                    Text("Done")
+                        .font(.system(size: 20, weight: .bold))
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
@@ -35,7 +40,12 @@ struct mainScreen: View {
                         .padding(.horizontal, 40)
                 }
             }
-            .padding()
+
+            .padding(.bottom, 10)
+            
+            Text("Images from flaticon")
+                .font(.system(size: 10))
+                .foregroundColor(.gray)
         }
 }
 
